@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <script src="js/lightbox-plus-jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/js/isotope.pkgd.min.js"></script>
+</head>
+<body>
+  
+<div class="container">
+
+  <div class="row portfolio-manu">
+    <ul class="nav">
+      <li><a href="#" data-filter="*">home</a></li>
+      <li data-filter=".Web">Web</li>
+      <li data-filter=".Gra">Gr a</li>
+      <li data-filter=".Dev">Dev</li>
+    </ul>
+  </div>
+  <div class="row potfolio-item">
+
+    <div class="col-lg-4 col-md-6 item Dev">
+      <a href="images/1.1.jpg" data-lightbox="mygallery" data-title="shameem"><img src="images/1.jpg" class="w-100"></a>
+     
+    </div>
+
+    <div class="col-lg-4 col-md-6 item Dev">
+      <a href="images/2.1.jpg" data-lightbox="mygallery" data-title="shameem"><img src="images/2.jpg" class="w-100"></a>
+    </div>
+
+
+    <div class="col-lg-4 col-md-6 item Web">
+      <a href="images/3.1.jpg" data-lightbox="mygallery" data-title="shameem"><img src="images/3.jpg" class="w-100"></a>
+    </div>
+
+
+    <div class="col-lg-4 col-md-6 item Gra">
+      <a href="images/4.1.jpg" data-lightbox="mygallery" data-title="shameem"><img src="images/4.jpg" class="w-100"></a>
+    </div>
+
+
+
+    <div class="col-lg-4 col-md-6 item Web">
+      <a href="images/5.1.jpg" data-lightbox="mygallery" data-title="shameem"><img src="images/5.jpg" class="w-100"></a>
+    </div>
+
+
+    <div class="col-lg-4 col-md-6 item Gra">
+      <a href="images/6.1.jpg" data-lightbox="mygallery" data-title="shameem"><img src="images/6.jpg" class="w-100"></a>
+    </div>
+
+
+    <div class="col-lg-4 col-md-6 item Web">
+      <a href="images/7.1.jpg" data-lightbox="mygallery" data-title="shameem"><img src="images/7.jpg" class="w-100"></a>
+    </div>
+
+
+    <div class="col-lg-4 col-md-6 item Gra">
+      <a href="images/9.1.jpg" data-lightbox="mygallery" data-title="shameem"><img src="images/9.jpg" class="w-100"></a>
+    </div>
+
+    <div class="col-lg-4 col-md-6 item Dev">
+      <a href="images/8.1.jpg" data-lightbox="mygallery" data-title="shameem"><img src="images/8.jpg" class="w-100"></a>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+<script type="text/javascript">
+	$('potfolio-item').isotope({
+		itemSelector: '.item',
+		layoutMode: 'fitRows'
+	});
+	$('.portfolio-manu ul li').click(function () {
+		$('.portfolio-manu ul li').removeClass('active');
+		$(this).addClass('active');
+		var selector = $(this).attr('data-filter');
+		$('.potfolio-item').isotope({
+			filter: selector
+		});
+		return false;
+	})
+</script>
+<script>
+  $(document).ready(function () {
+    $('li').click(function () {
+      $('li')addClass('active')
+    });
+  });
+</script>
+</body>
+</html>
